@@ -1,4 +1,10 @@
-<<<<<<< HEAD
-=======
-We still dont know what we will do - but hey, if you can read this at least my git works!
->>>>>>> 5c46155f4d4e80cff769cf1a4e7020c79ff0129b
+# Projekt der Gruppe 15
+
+Dieses Projekt ist ein WIP und hat sich als Ziel gesetzt, durch LSB Steganographie eine Text Datei in ein Bild zu Dekodieren.
+
+## Resourcen:
+
+Die Resourcen, die wir für das Projekt verwenden werden im Folgenden gelistet:
+
+- ['stb_image.h'](https://github.com/nothings/stb): Diese Datei kommt von [nothings](twitter.com/nothings), durch diese Können wir uns die Pixel eines Bildes ganz genau anschauen.
+- [imgtochannels.c](Gruppe15/NhVk-Workspace/imgtochannels.c) war der erste Versuch unserer Gruppe Pixel Daten einzulesen. 

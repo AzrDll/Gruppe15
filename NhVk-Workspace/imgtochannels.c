@@ -1,3 +1,9 @@
+/**
+ * Erster Versuch ein Bild in RGB Werte zu zerlegen.
+ * **/
+
+
+
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 #include <stdio.h>

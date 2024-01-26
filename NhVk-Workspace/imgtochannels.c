@@ -40,7 +40,7 @@ void imgtoRGB(const char* imagePath, const char* tempFilePath) {
             // Ausgabe der RGB Werte in tempFile
             fprintf(tempFile, "Pixel am Punkt %d, %d hat die RGB Values: %u %u %u \n", x, y, r, g, b); 
         }
-        // Zeilenumbruch
+        // Zeilenumbruch basically :)
         fprintf(tempFile, "\n");
     }
 

@@ -35,11 +35,11 @@ void imgtoRGB(const char* imagePath, const char* tempFilePath) {
             /**
              * Diese Funktion ist ein wenig scuft, ich versuche das mal zu erklären:
              * 
-             * *p ist ein Pointer auf den ersten Pixel in der aktuellen Zeile einfacherheits halber stellen wir uns das mal so vor:
+             * *p ist der Pointer auf den ersten Pixel in der aktuellen Zeile einfacherheits halber stellen wir uns das mal so vor:
              * |p1 p2|
              * |p3 p4|
              * 
-             * p1 ist der Pointer auf den ersten Pixel in der ersten Zeile und wird bei unserem 2x2 Beispiel so berechnet (y*width + x)*channels also (0*2 + 0)*3 = 0, + img ist der Pointer auf den ersten Pixel in der ersten Zeile also p1.
+             * p1 ist das erste Pixel in der ersten Zeile und wird bei unserem 2x2 Beispiel so berechnet (y*width + x)*channels also (0*2 + 0)*3 = 0, + img ist der Pointer auf den ersten Pixel in der ersten Zeile also p1.
              * Wenn wir nun auf p2 zeigen wollen berechnen wir (0*2 + 1)*3 = 3, also 3 Bytes weiter, da wir 3 Channels haben. Das ist dann p2. Und das geht dann so weiter.
              * 
              * Falls Fragen aufkommen einfach pm per Discord :).

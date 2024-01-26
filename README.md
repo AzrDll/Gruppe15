@@ -1,6 +1,6 @@
 # Projekt der Gruppe 15
 
-Dieses Projekt ist ein WIP und hat sich als Ziel gesetzt, durch LSB Steganographie eine Text Datei in ein Bild zu Dekodieren.
+Dieses Projekt ist ein WIP und hat sich als Ziel gesetzt, durch LSB Steganographie eine Text-Datei in ein Bild zu Kodieren.
 
 ## Resourcen:
 

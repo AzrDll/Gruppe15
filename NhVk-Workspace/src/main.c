@@ -45,18 +45,17 @@ void imgtoRGB(const char* imgPath, const char* bitDumpPath){
             char* gBin = byte_to_binary(g);
             char* bBin = byte_to_binary(b);  
 
-            printf("r: %s, g: %s, b: %s\n", rBin, gBin, bBin);
+            fprintf(bitDump,"r: %s, g: %s, b: %s\n", rBin, gBin, bBin);
 
             free(rBin);
             free(gBin);
             free(bBin);
         }
 
-        fclose(bitDump);
-        stbi_image_free(img);
-
     }
 
+    fclose(bitDump);
+    stbi_image_free(img);
 
 }
 

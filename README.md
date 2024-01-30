@@ -20,7 +20,7 @@ Bei der LSB-Steganografie werden die niederwertigsten Bits der Pixelwerte eines 
 
 ## Implementation
 
-Das Projekt ist in C implementiert und verwendet die Bibliothek `stb_image.h` für die Verarbeitung von PNG-Bildern, da diese verlustfrei sind, was für die Integrität der versteckten Daten entscheidend ist.
+Das Projekt ist in C implementiert und verwendet die Bibliothek `stb_image.h` für die Verarbeitung von JPG-Bildern, da diese verlustfrei sind, was für die Integrität der versteckten Daten entscheidend ist.
 
 ### Encoding 
 

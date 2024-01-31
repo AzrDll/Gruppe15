@@ -1,7 +1,3 @@
-/**
- * Auch bloat, brauchen wir später für bin-to-str
- * **/
-
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 #include <stdio.h>

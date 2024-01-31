@@ -138,11 +138,11 @@ int main(){
     /*
     TODO:
 
-    - image file als argument
+    - image file als Argument
     - text.txt als echtes temp was sich nach dem Prozess selbst löscht
-    - verschlüsselung für bessere sicherheit 
-    - formatierung?
-    - hin und rückwandlung
+    - Verschlüsselung für bessere Sicherheit 
+    - Formatierung?
+    - Hin und Rückwandlung
 
     - notes NhVk
     

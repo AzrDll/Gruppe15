@@ -17,7 +17,7 @@ void imgtoRGB(const char* imagePath, const char* tempFilePath) {
     
     // error handling, falls das Bild nicht geladen werden konnte
     if(img == NULL){
-        printf("Error: Bild konnte nicht geladen werden\n");
+        printf("\nError: Bild konnte nicht geladen werden\n");
         exit (1);
     }
 
@@ -28,7 +28,7 @@ void imgtoRGB(const char* imagePath, const char* tempFilePath) {
     
     // error handling, falls tempFile nicht geöffnet werden konnte
     if(tempFile == NULL){
-        printf("Error: Temp konnte nicht geladen werden!\n");
+        printf("\nError: Temp konnte nicht geladen werden!\n");
         exit (1);
     }
 
@@ -72,8 +72,12 @@ void imgtoRGB(const char* imagePath, const char* tempFilePath) {
 }
 
 int main(){
-    // Aufruf der Funktion imgtoRGB
+    
+printf("HHHHHHHHH     HHHHHHHHHIIIIIIIIII     NNNNNNNN        NNNNNNNNFFFFFFFFFFFFFFFFFFFFFF     OOOOOOOOO     \nH:::::::H     H:::::::HI::::::::I     N:::::::N       N::::::NF::::::::::::::::::::F   OO:::::::::OO   \nH:::::::H     H:::::::HI::::::::I     N::::::::N      N::::::NF::::::::::::::::::::F OO:::::::::::::OO \nHH::::::H     H::::::HHII::::::II     N:::::::::N     N::::::NFF::::::FFFFFFFFF::::FO:::::::OOO:::::::O\n  H:::::H     H:::::H    I::::I       N::::::::::N    N::::::N  F:::::F       FFFFFFO::::::O   O::::::O\n  H:::::H     H:::::H    I::::I       N:::::::::::N   N::::::N  F:::::F             O:::::O     O:::::O\n  H::::::HHHHH::::::H    I::::I       N:::::::N::::N  N::::::N  F::::::FFFFFFFFFF   O:::::O     O:::::O\n  H:::::::::::::::::H    I::::I       N::::::N N::::N N::::::N  F:::::::::::::::F   O:::::O     O:::::O\n  H:::::::::::::::::H    I::::I       N::::::N  N::::N:::::::N  F:::::::::::::::F   O:::::O     O:::::O\n  H::::::HHHHH::::::H    I::::I       N::::::N   N:::::::::::N  F::::::FFFFFFFFFF   O:::::O     O:::::O\n  H:::::H     H:::::H    I::::I       N::::::N    N::::::::::N  F:::::F             O:::::O     O:::::O\n  H:::::H     H:::::H    I::::I       N::::::N     N:::::::::N  F:::::F             O::::::O   O::::::O\nHH::::::H     H::::::HHII::::::II     N::::::N      N::::::::NF:::::::F             O:::::::OOO:::::::O\nH:::::::H     H:::::::HI::::::::I     N::::::N       N:::::::NF:::::::F              OO:::::::::::::OO \nH:::::::H     H:::::::HI::::::::I     N::::::N        N::::::NF:::::::F                OO:::::::::OO   \nHHHHHHHHH     HHHHHHHHHIIIIIIIIII     NNNNNNNN         NNNNNNNFFFFFFF                    OOOOOOOOO     ");
+
     imgtoRGB("./img.jpg", "./temp.txt");
+
+
     return 0;
 }
 

@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 
+//Test
 // imgtoRGB: nimmt ein bild und schreibt die RGB bits in eine datei
 void imgtoRGB(const char* imgPath, const char* bitDumpPath){
     int width, height, channels;

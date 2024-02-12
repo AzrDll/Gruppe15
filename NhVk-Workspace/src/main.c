@@ -59,7 +59,69 @@ void imgtoRGB(const char* imgPath, const char* bitDumpPath){
 
 }
 
+
+Wir haben:
+unsigned char *img
+const char* bitDumpPath
+
+
+void * rgbManipulation(const char* bitDumpPath, int argc, char** argv)
+{
+    // Decide wether we need to en- or decrypt
+    switch(argc)
+        case 1:   // decrypt
+            
+            
+
+        case 2:   // encrypt
+            // prüfe ob nachricht in Bild rein passt
+            int len = 0;
+            for (;;)
+                if 
+                break
+
+        default
+            goto error
+
+        :error
+            // error and exit
+}
+
+
+
 int main(){
-    imgtoRGB("./img.jpg", "./test.txt");
+
+    /*
+        1. Aufrufparameter mit Infos
+            Meine Notizen:
+                1* = Pfad zur Datei
+                2* = Pfad zum Geheimtext
+                Wenn nur 1 gegeben dann entschlüssle
+                Wenn beide angegeben dann verschlüssle
+            Erledigt?
+                Fast
+            Zuständig?
+                Noah
+        2. ImgtoRGB
+            OK
+        3. RGB ver- oder entschlüsseln
+            JHE
+
+            Meine Notizen:
+
+
+
+
+
+
+        4. RGBtoImg
+            Philipp
+            z.B. via stbi_write_jpg("out.jpg", width, height, channels, img, 100);
+
+
+            RGB ver- oder entschlüsseln
+    */
+
+    imgtoRGB("./Eifelturm-767x522.jpg", "./test.txt");
     return 0;
 }

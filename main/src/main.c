@@ -117,16 +117,14 @@ char* BittoText(char* bin){
         printf("Error: Speicher konnte nicht allokiert werden\n");
         exit(1);
     }
-
-        
+  
     for(int i = 0; i < len; i += 8){
         char byte = 0;
             for(int j = 0; j < 8; j++){
                 byte = (byte << 1) | (bin[i + j] - '0');
             }
 
-    str[i / 8] = byte;
-        
+    str[i / 8] = byte;  
         
     }
     str[len / 8] = '\0';  
@@ -146,8 +144,6 @@ void writeSringToFile(const char* str, const char* outputFile){
     fclose(file);
 
 }
-
-
 
 int main(){
     TexttoBit("test.txt", "test.bin");

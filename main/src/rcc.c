@@ -49,12 +49,7 @@ int main() {
             char* g_bin = int_to_binary(pixel[1]);
             char* b_bin = int_to_binary(pixel[2]);
 
-            
-        
-            
             fprintf(file, "Pixel [%d, %d]: R=%s, G=%s, B=%s\n", i, j, r_bin, g_bin, b_bin);
-
-            
 
             free(r_bin);
             free(g_bin);

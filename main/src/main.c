@@ -118,13 +118,20 @@ char* BittoText(char* bin){
         exit(1);
     }
   
+    int endOfCodeTermination = strlen("/*404 END OF FORMATED CODE*/");
+
     for(int i = 0; i < len; i += 8){
         char byte = 0;
             for(int j = 0; j < 8; j++){
                 byte = (byte << 1) | (bin[i + j] - '0');
             }
 
-    str[i / 8] = byte;  
+            str[i / 8] = byte;  
+
+            if(i >= endOfCodeTermination * 8 && strncmp(str + i / 8 - endOfCodeTermination + 1, "/*404 END OF FORMATED CODE*/", endOfCodeTermination) == 0){
+                str[i / 8 - endOfCodeTermination + 1] = '\0';
+                break;
+            }
         
     }
     str[len / 8] = '\0';  
@@ -145,6 +152,38 @@ void writeSringToFile(const char* str, const char* outputFile){
 
 }
 
+int main(int argc, char *argv[]){
+    if (argc != 3){
+        printf("Usage: %s <yourTextFile> <yourImageFile>\n", argv[0]);
+        return 1;
+    }
+
+    const char *inputFilePath = argv[1];
+    const char *imgPath = argv[2];
+
+    char binaryOut[200] = "binoutput.txt";
+    char outputImage[200] = "output.png";
+    char outputText[200] = "output.txt";
+
+    TexttoBit(inputFilePath, binaryOut);
+    WritetoImg(imgPath, binaryOut, outputImage);
+
+    char *binaryString = LSBtoBit(outputImage);
+    if(binaryString != NULL){
+        char *eS = BittoText(binaryString);
+        writeSringToFile(eS, outputText);
+
+        free(binaryString);
+        free(eS);
+    }
+    else {
+        fprintf(stderr, "Error: Binarys konnten nicht von Bild extrahiert werden\n");
+        return 1;
+    }
+
+}
+
+/*
 int main(){
     TexttoBit("test.txt", "test.bin");
     WritetoImg("cpy.png", "test.bin", "out.png");
@@ -162,3 +201,4 @@ int main(){
         return 1;
     }
 }
+*/

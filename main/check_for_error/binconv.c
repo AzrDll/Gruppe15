@@ -33,7 +33,6 @@ void TexttoBit(const char* inputFilePath, const char* outputFilePath){
         }
     }   
 
-
     fclose(imgFile);
     fclose(outputFile);
 }
@@ -53,16 +52,29 @@ void checksimilarity(const char* check1, const char* check2){
         exit(1);
     }
 
-    int i;
-    for(i = 0; i < ((fgetc(file1) != EOF) && (fgetc(file2) != EOF)); i++){
-        if(fgetc(file1) != fgetc(file2)){
-            printf("Files are not similar\n");
+    int char1, char2;
+    char1 = fgetc(file1);
+    char2 = fgetc(file2);
+
+    while ((char1 != EOF) && (char2 != EOF)){
+        if (char1 != char2){
+            printf("Datein sind gleich.\n");
+            fclose(file1);
+            fclose(file2);
             return;
         }
-        else{
-            printf("Files are similar\n");
-        }
+        char1 = fgetc(file1);
+        char2 = fgetc(file2);
     }
+
+    if (char1 == EOF && char2 == EOF){
+        printf("Datein sind gleich.\n");
+    } else {
+        printf("Datein sind nicht gleich.\n");
+    }
+
+    fclose(file1);
+    fclose(file2);
 
 }
 

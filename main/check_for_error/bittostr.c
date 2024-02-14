@@ -31,29 +31,33 @@ char* LSBtoBit(const char* imgPath){
     return str;
 }
 
-
-
 char* BittoText(char* bin){
     int len = strlen(bin);
-    char *str = malloc(len / 7 + 1);
+    char *str = malloc(len / 8 + 1);
     if(str == NULL)
     {
         printf("Error: Speicher konnte nicht allokiert werden\n");
         exit(1);
     }
+  
+    int endOfCodeTermination = strlen("/*404 END OF FORMATED CODE*/");
 
-    
-        for(int i = 0; i < len; i += 8){
+    for(int i = 0; i < len; i += 8){
         char byte = 0;
             for(int j = 0; j < 8; j++){
                 byte = (byte << 1) | (bin[i + j] - '0');
-    }
-        str[i / 8] = byte;
-        
-    }
+            }
 
-    str[len / 8] = '\0';
+            str[i / 8] = byte;  
+
+            if(i >= endOfCodeTermination * 8 && strncmp(str + i / 8 - endOfCodeTermination + 1, "/*404 END OF FORMATED CODE*/", endOfCodeTermination) == 0){
+                str[i / 8 - endOfCodeTermination + 1] = '\0';
+                break;
+            }
         
+    }
+    str[len / 8] = '\0';  
+
     return str;
 }
 
@@ -70,10 +74,17 @@ void writeSringToFile(const char* str, const char* outputFile){
 
 }
 
-int main(){
-    char *bit = LSBtoBit("out.png");
+int main(int argc, char *argv[]){
+    if(argc != 2){
+        printf("Usage: %s <image>\n", argv[0]);
+        return 1;
+    }
+
+    const char *imgPath = argv[1];
+
+    char *bit = LSBtoBit(imgPath);
     char *text = BittoText(bit);
-    writeSringToFile(text, "out.temp");
+    writeSringToFile(text, "out.txt");
     free(bit);
     free(text);
 }

@@ -51,6 +51,12 @@ void WritetoImg(const char* imgPath, const char* binaryOut, const char* outputIm
         exit(1);
     }
 
+    if (channels == 4) {
+        printf("Error: Das Bild ist 32-Bit, was nicht unterstuetzt wird.\n");
+        stbi_image_free(img);
+        exit(1);
+    }
+
     FILE *binaryFile = fopen(binaryOut, "r");
     if(binaryFile == NULL)
     {
@@ -166,16 +172,18 @@ int main(int argc, char *argv[]){
     char outputText[200] = "output.txt";
 
     TexttoBit(inputFilePath, binaryOut);
+    printf("Text in Binary umgewandelt\n");
     WritetoImg(imgPath, binaryOut, outputImage);
-
+    printf("Binary in Bild geschrieben\n");
     char *binaryString = LSBtoBit(outputImage);
     if(binaryString != NULL){
         char *eS = BittoText(binaryString);
         writeSringToFile(eS, outputText);
-
+        printf("Text extrahiert\n");
         free(binaryString);
         free(eS);
     }
+    
     else {
         fprintf(stderr, "Error: Binarys konnten nicht von Bild extrahiert werden\n");
         return 1;

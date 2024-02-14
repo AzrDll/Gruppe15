@@ -14,12 +14,17 @@ char* int_to_binary(unsigned int value) {
     return binary;
 }
 
+/*
+
+Code wurde mal für einen anderen Zweck geschrieben, daher nicht mehr relevant. Hier zu Archivierungs Zwecken.
+
 char* lsb_to_string(unsigned char value) {
     char* bitString = malloc(2); 
     bitString[0] = (value & 1) + '0'; 
     bitString[1] = '\0'; 
     return bitString;
 }
+*/
 
 int main() {
     int width, height, channels;

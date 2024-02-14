@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 void TexttoBit(const char* inputFilePath, const char* outputFilePath){
 
     FILE *imgFile = fopen(inputFilePath, "r");
@@ -75,7 +74,6 @@ void checksimilarity(const char* check1, const char* check2){
 
     fclose(file1);
     fclose(file2);
-
 }
 
 int main(){

@@ -36,6 +36,25 @@ Das Projekt ist in C implementiert und verwendet die Bibliothek `stb_image.h` f�
 3. **Nachricht dekodieren**: Die binären Daten werden wieder in die ursprüngliche Nachricht umgewandelt.
 
 
+
+# Funktion
+
+## main.c
+
+Unsere `main.c-Datei` nimmt eine Bild-Datein und eine Text-Datei und verwendet die Least-Significant-Bit (LSB) Steganographie, um minimale Änderungen im Bild vorzunehmen und den Text aus der Text-Datei zu verbergen.
+
+# Usage
+
+Schritt 1:
+
+`gcc main.c -o [gewünschter Name].exe` --> output ist eine .exe Datei
+
+Schritt 2: 
+
+`[Name].exe ./[Path-To-Text] ./[Path-To-Image]`--> Programm läd, nach ca. 20-40 Sekunden (auf unserem Testsystem) sollten 3 neue Datein im Ordner liegen. ./[Output-Image] ./[Bin-Output] ./[Output-Text]
+
+**Achtung, es können keine 32bit Bilder verwendet werden (i.e. keine Bilder mit Transparentem Hintergrund, da dazu 4 Channels gebraucht werden.)**
+
 ## Resourcen:
 
 Die Resourcen, die wir für das Projekt verwenden werden im folgenden gelistet:

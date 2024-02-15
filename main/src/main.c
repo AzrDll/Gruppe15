@@ -190,23 +190,3 @@ int main(int argc, char *argv[]){
     }
 
 }
-
-/*
-int main(){
-    TexttoBit("test.txt", "test.bin");
-    WritetoImg("cpy.png", "test.bin", "out.png");
-
-    char *binaryString = LSBtoBit("out.png");
-    if (binaryString != NULL){
-        char *eS = BittoText(binaryString);
-        writeSringToFile(eS, "f_output.txt");
-
-        free(binaryString);
-        free(eS);
-    }
-    else {
-        fprintf(stderr, "Error: Binarys konnten nicht von Bild extrahiert werden\n");
-        return 1;
-    }
-}
-*/

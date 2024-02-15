@@ -37,14 +37,14 @@ Das Projekt ist in C implementiert und verwendet die Bibliothek `stb_image.h` f√
 
 # Showcase and PoC
 
-***Bild unseres Sourcodes:***
+***Bild unseres Source Codes:***
 
 <p align="center">
   <a href="https://github.com/AzrDll/Gruppe15/blob/main/main/src/main.c">
     <img src="https://cdn.discordapp.com/attachments/1085987325995135007/1207450485947371522/hi7cEjC.png?ex=65dfb0e5&is=65cd3be5&hm=05fd5eb37d1e9f4069e0b17de313708e9bbd157b29e8f547e3f158529ad92892&" alt="AzRDll style="display:block; margin:auto;" width="400" /></a>
 </p>
 
-***Bild unseres Sourcodes (mit Source Code):***
+***Bild unseres Source Codes (mit Source Code):***
 
 <p align="center">
   <a href="https://github.com/AzrDll/Gruppe15/blob/main/main/src/main.c">
